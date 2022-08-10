@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="btn-wine">
+            <input class="search" onkeyup="search()" type="text" id="search" autocomplete="off" placeholder="Search">
+        </div>
+        
+        <div class="wine-container">
+            <table class="table-wines">
+              <tr class="tr-wines">
+                <th class="td-wines-1">ID</th>
+                <th class="td-wines-2">WINERY
+                    <select class="select" id="winesDropdown" oninput="filter()">
+                        <option>Winery</option>
+                        <option>Maselva</option>
+                        <option>Ernesto Ruffo</option>
+                        <option>Cartuxa</option>
+                        <option>Schrader</option>
+                        <option>Hundred Acre</option>
+                        <option>Sine Qua Non</option>
+                        <option>Del Dotto</option>
+                        <option>Darioush</option>
+                        <option>Garbole</option>
+                        <option>Scarecrow</option>
+                    </select>
+                </th>
+                
+                
+                <th class="td-wines-3">WINE
+                    <a id="teamA" class = 'name' onclick='sortA()'> &#9650</a>
+                    <a id="teamZ" class = 'name z' onclick='sortZ()'> &#9660</a>
+                </th>
+                <th class="td-wines-4">LOCATION</th>
+                <th class="td-wines-5">RATING</th>
+                <th class="td-wines-5">IMAGE</th>
+
+              </tr>
+            </table>
+        </div>
+        <div class="wine-container">
+            <table class="wines-sector" id="wine"></table>
+        </div>
+        <div class="reset">
+            <button onclick="window.location.reload();" class="button">Refresh</button>
+        </div>
+    </header>
+    <div id="preloader">
+<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1000px;background: #2574A9 url(http://hello-site.ru//main/images/preloads/tail-spin.svg) center center no-repeat;background-size:41px;}</style>
+<div id="hellopreloader"><div id="hellopreloader_preload"></div><p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p></div>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};</script>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
